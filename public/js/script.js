@@ -3,9 +3,7 @@ jQuery(document).ready(function ($) {
         paramForm = $("#paramForm");
 
     function msg(title, text) {
-        $("#msg").show().html(
-            "<strong>" + title + "</strong><br>" + text
-        );
+        $("#msg").show().html("<strong>" + title + "</strong><br>" + text);
     }
 
     function castVote() {
@@ -15,7 +13,7 @@ jQuery(document).ready(function ($) {
         $("#vote").hide();
         $.ajax({
             type: "post",
-            url: "/melody/vote/" + melody,
+            url: "/vote/" + melody,
             data: {vote: choice}
         });
     }
@@ -37,9 +35,9 @@ jQuery(document).ready(function ($) {
     };
 
     paramForm.submit(function () {
-        var result = $("#result"),
-            midi = $("#midi"),
-            vote = $("#vote");
+        var result = $("#result");
+        var midi   = $("#midi");
+        var vote   = $("#vote");
 
         $.ajax({
             type: paramForm.attr("method"),
@@ -65,7 +63,7 @@ jQuery(document).ready(function ($) {
                 pos += offset;
             }
 
-            midi.attr("href", "/melody/midi/" + encoded);
+            midi.attr("href", "/midi/" + encoded);
             vote.attr("data-melody", encoded).show();
             result.show();
 
