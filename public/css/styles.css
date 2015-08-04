@@ -1,116 +1,51 @@
-/*   html5doctor.com Reset Stylesheet (Eric Meyer's Reset Reloaded + HTML5 baseline)  v1.4 2009-07-27 | Authors: Eric Meyer & Richard Clark  html5doctor.com/html-5-reset-stylesheet/*/
-html, body, div, span, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-abbr, address, cite, code,
-del, dfn, em, img, ins, kbd, q, samp,
-small, strong, sub, sup, var,
-b, i,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, figure, footer, header, hgroup, menu, nav, section, menu,
-time, mark, audio, video {
-margin:0;
-padding:0;
-border:0;
-outline:0;
-font-size:100%;
-vertical-align:baseline;
-background:transparent;
-}
-
-article, aside, figure, footer, header,
-hgroup, nav, section { display:block; }
-
-nav ul { list-style:none; }
-
-blockquote, q { quotes:none; }
-
-blockquote:before, blockquote:after,
-q:before, q:after { content:''; content:none; }
-
-a { margin:0; padding:0; font-size:100%; vertical-align:baseline; background:transparent; }
-
-ins { background-color:#ff9; color:#000; text-decoration:none; }
-
-mark { background-color:#ff9; color:#000; font-style:italic; font-weight:bold; }
-
-del { text-decoration: line-through; }
-
-abbr[title], dfn[title] { border-bottom:1px dotted #000; cursor:help; }
-
-/* tables still need cellspacing="0" in the markup */
-table { border-collapse:collapse; border-spacing:0; }
-
-hr { display:block; height:1px; border:0; border-top:1px solid #ccc; margin:1em 0; padding:0; }
-
-input, select { vertical-align:middle; }
-/* END RESET CSS */
-
-/*
-fonts.css from the YUI Library: developer.yahoo.com/yui/
-Please refer to developer.yahoo.com/yui/fonts/ for font sizing percentages
-*/
-body { font:13px sans-serif; *font-size:small; *font:x-small; line-height:1.22; }
-table { font-size:inherit; font:100%; }
-select, input, textarea { font:99% sans-serif; }
-
-
 @import url(/css/reset.css);
+@import url(http://fonts.googleapis.com/css?family=Roboto);
 
 body {
   color: #333;
-  font-family: Arial, Sans, sans-serif;
-  padding: 1em;
+  font-family: Roboto, sans-serif;
+  padding: 20px;
 }
 
-a, .link {
-  color: #00F;
-  cursor: pointer;
-  text-decoration: underline;
-}
-
-h1 {
-  font-size: 150%;
-  margin-bottom: 0.75em;
-}
-
-label, input, select {
-  margin: 0.3125em 0;
-}
-
-form {
-  margin-bottom: 1em;
+a {
+  color: #0277bd;
+  text-decoration: none;
 }
 
 .hidden {
   display: none;
 }
 
+h1 {
+  font-size: 25pt;
+  margin-bottom: 0.75em;
+}
+
+.row {
+  margin-bottom: 0.625em;
+}
+
+.row span {
+  font-size: 80%;
+}
+
+input[type=submit] {
+  font-weight: bold;
+}
+
 #midi {
-  background: url('/img/download.png') top left no-repeat;
-  display: block;
-  margin-bottom: 10px;
+  background: url('/img/download.png') center left no-repeat;
+  margin-bottom: 0.625em;
   padding-left: 20px;
 }
 
-#vote {
-  margin-bottom: 20px;
-}
-
-#voteYes {
+#voteY {
   background: url('/img/thumbs_up.png') center left no-repeat;
-  padding: 2px 10px 2px 20px;
+  margin: 0 0.5em;
+  padding-left: 20px;
 }
 
-#voteNo {
+#voteN {
   background: url('/img/thumbs_down.png') center left no-repeat;
-  padding: 2px 10px 2px 20px;
+  padding-left: 20px;
 }
-
-#msg {
-  background-color: #EFEFEF;
-  border: 1px solid #333;
-  padding: 5px;
-}
-

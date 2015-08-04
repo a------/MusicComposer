@@ -1,8 +1,6 @@
 <?php
 namespace Boronczyk\MusicComposer;
 
-;
-
 class Composer
 {
     protected $pitchProb;
